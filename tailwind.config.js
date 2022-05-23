@@ -5,7 +5,10 @@ module.exports = {
     extend: {},
   },
   variants: {
-    extend: {},
+    extend: {
+      opacity: ["disabled"],
+      cursot: ["disabled"],
+    },
   },
   plugins: [require("@tailwindcss/forms")],
 };

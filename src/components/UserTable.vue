@@ -1,28 +1,41 @@
 <script>
 export default {
   name: "UserTable",
+  data() {
+    return {
+      tableHeaders: ["User Number", "User Name", "City", "Zip Code", "Address"],
+      tableData: [
+        {
+          id: 1,
+          name: "Leanne Graham",
+          city: "California",
+        },
+        {
+          id: 2,
+          name: "Sunny Sunshine",
+          city: "Copenhagen",
+        },
+      ],
+    };
+  },
   props: {},
 };
 </script>
 
 <template>
-  <h1 class="text-3xl font-bold underline">Users table</h1>
-</template>
+  <div>
+    <t-tag tag-name="div" class="max-w-screen-lg m-auto">
+      <t-tag
+        tag-name="h3"
+        variant="h3"
+        class="flex justify-center text-4xl text-blue-900"
+      >
+        Users table
+      </t-tag>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-}
-a {
-  color: #42b983;
-}
-</style>
+      <t-tag tag-name="div" class="my-8">
+        <t-table :headers="tableHeaders" :data="tableData"></t-table>
+      </t-tag>
+    </t-tag>
+  </div>
+</template>
