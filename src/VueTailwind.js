@@ -1,8 +1,11 @@
-import { TButton, TTable, TTag } from "vue-tailwind/dist/components";
+import { TButton, TTable, TTag, TInput } from "vue-tailwind/dist/components";
 
 const VueTailwindComponent = {
   "t-tag": {
     component: TTag,
+  },
+  "t-input": {
+    component: TInput,
   },
   "t-table": {
     component: TTable,
